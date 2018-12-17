@@ -204,7 +204,7 @@ body{
 }
 
 .row{
-  max-width: 1180px;
+  max-width: 1266px;
   margin: 0 auto;
 }
 
@@ -220,8 +220,11 @@ body{
   height: 90px;
   margin: 0px auto;
 }
-.main ul{
+/* .main ul{
   padding: 50px;
+} */
+.navmenu{
+	padding: 50px;
 }
 
 .main ul li{

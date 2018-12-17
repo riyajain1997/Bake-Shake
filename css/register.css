@@ -93,7 +93,7 @@ body
 }
 
 .row{
-  max-width: 1180px;
+  max-width: 1266px;
   margin: 0 auto;
 }
 
@@ -105,12 +105,15 @@ body
   color:white;
 }
 .main{
-  width: 180%;
+  width: 100%;
   height: 90px;
   margin: 0px auto;
 }
-.main ul{
+/* .main ul{
   padding: 30px;
+} */
+.navmenu{
+	padding: 30px;
 }
 
 .main ul li{
