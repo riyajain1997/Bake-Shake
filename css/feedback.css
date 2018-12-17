@@ -1,0 +1,38 @@
+@import"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+*
+ {
+  box-sizing: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.textbox {
+	font-size: 60%;
+	text-align:center;
+	color:black;
+
+}
+.container {
+    position: relative;
+    text-align: center;
+    color: red;
+	font-size: 400%;
+	
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+.top {
+    position: absolute;
+    top: 130px;
+    left: 400px;
+
+}
+.checked {
+    color: yellow;
+}

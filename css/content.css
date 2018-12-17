@@ -1,0 +1,65 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+header{
+	background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('../images/gal-img-05.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+}
+
+body{
+	font-size: 20px;
+	overflow-x: hidden;
+	color: white;
+	font-family: 'Flamenco', cursive;
+}
+
+.main-content-header{
+	width: 1180px;
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%,  -50%);
+}
+h1{
+	color: white;
+	font-size: 240%;
+	word-spacing: 5px;
+	letter-spacing: 2px;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	font-weight: lighter;
+}
+
+.btn{
+	display: inline-block;
+	padding: 10px  30px;
+	font-weight: lighter;
+	text-decoration: none;
+	text-transform: uppercase;
+	border-radius: 200px;
+	transition: background-color 0.2s,border 0.2s,color 0.2s;
+	border: 1px solid white;
+	background-color: transparent;
+	color: white;
+
+}
+.btn:hover{
+	background-color: orange;
+}
+
+.colorchange{
+	animation: changecolor 2s infinite;
+
+}
+
+@keyframes changecolor{
+	0%{color: red;}
+	25%{color: purple;}
+	50%{color: white;}
+	100%{color: purple;}
+}
