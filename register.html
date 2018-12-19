@@ -29,10 +29,10 @@ function validation()
     			document.getElementById('luser').innerHTML =" ** Please fill the username";
     			return false;
     		}
-    		if (!isNaN(luser)){
-    			document.getElementById('luser').innerHTML =" ** Only charcters are allowed.";
-    			return false;
-    		}
+    		// if (isNaN(luser)){
+    		// 	document.getElementById('luser').innerHTML =" ** Only charcters are allowed.";
+    		// 	return false;
+    		// }
 
     		if(lpass == ""){
     			document.getElementById('lpass').innerHTML =" ** Please fill the Password";
@@ -46,10 +46,10 @@ function validation()
     			document.getElementById('username').innerHTML =" ** Please fill the username";
     			return false;
     		}
-    		if (!isNaN(ruser)){
-    			document.getElementById('username').innerHTML =" ** Only charcters are allowed.";
-    			return false;
-    		}
+    		// if (!isNaN(ruser)){
+    		// 	document.getElementById('username').innerHTML =" ** Only charcters are allowed.";
+    		// 	return false;
+    		// }
 
     		if(rpass == ""){
     			document.getElementById('passwords').innerHTML =" ** Please fill the Password";
@@ -150,7 +150,7 @@ function validation()
     </nav>
     </div>
 	<div id="container">
-	<div class="col-lg-8 m-auto d-block">
+
 		<main id="main">
 
 	<!--<form action="#" onsubmit="return validation()">-->
@@ -161,14 +161,14 @@ function validation()
 			
 			<div class="form-group">
 					<input type="text" class="form-control inputbox" id="login-username" autocomplete="off" placeholder="User Name:">
-					<span id="luser" class="font-weight-bold "></span>
+					<span id="luser" style="color: red"></span>
 			</div>
 			<div class="form-group">
-					<input type="text" class="form-control inputbox" id="login-password" autocomplete="off" placeholder="Password:">
-					<span id="lpass" class="text-danger font-weight-bold "></span>
+					<input type="password" class="form-control inputbox" id="login-password" autocomplete="off" placeholder="Password:">
+					<span id="lpass" style="color: red"></span>
 			</div>
 			<div>
-                   <input  type="Login" name="Login" value="Login" class="btn btn-primary" onclick="validation()">
+                   <input  type="button" name="Login" value="Login" class="btn btn-primary" onclick="validation()">
             </div>
             <div class="textcenter signuptxt">Don't have an account? <br><a href="#" class="link registerlink">Sign up</a></div>
             <!--<p class="textcenter forgettxt"> <a href="#"class=" link forgetlink">Forget password?</a></p>-->
@@ -176,38 +176,38 @@ function validation()
 			<div id="registercontainer" hidden>
 				<div class="form-group">
 					<input type="text" class="form-control inputbox" id="register-fname" autocomplete="off" placeholder="User Name:">
-					<span id="username" class="text-danger font-weight-bold "></span>
+					<span id="username" style="color: red"></span>
 				</div>
 			
 				<div class="form-group">
 					<input type="password" class="form-control inputbox" id="register-password" autocomplete="off" placeholder="Password:">
-					<span id="passwords" class="text-danger font-weight-bold "></span>
+					<span id="passwords" style="color: red"></span>
 				</div>
 				<div class="form-group">
 					<input type="password" name="conpass" class="form-control inputbox" id="register-cnfmpassword" autocomplete="off" placeholder="Confirm Password:">
-					<span id="confirmpass" class="text-danger font-weight-bold "></span>
+					<span id="confirmpass" style="color: red"></span>
 				</div>
 				<div class="form-group">
 					<input type="number" name="mobile" class="form-control inputbox" id="mobilenumber" autocomplete="off" placeholder="Mobile No:">
-					<span id="mobileno" class="text-danger font-weight-bold "></span>
+					<span id="mobileno" style="color: red"></span>
 				</div>
 				<div class="form-group">
 					<input type="email" name="email" class="form-control inputbox" id="email" autocomplete="off" placeholder="Email Id:">
-					<span id="emailids" class="text-danger font-weight-bold "></span>
+					<span id="emailids" style="color: red"></span>
 				</div>
 			<div class="form-group">
 					<input type="text" name="addr" class="form-control inputbox" id="addr" autocomplete="off" placeholder="Address:">
-					<span id="addresses" class="text-danger font-weight-bold "></span>
+					<span id="addresses" style="color: red"></span>
 			</div>
 			
 			<div class="form-group">
 					<input type="text" name="city" class="form-control inputbox" id="city" autocomplete="off" placeholder="City:">
-					<span id="citys" class="text-danger font-weight-bold "></span>
+					<span id="citys" style="color: red"></span>
 			</div>
 		
 			<div class="form-group">
 					<input type="text" name="state" class="form-control inputbox" id="state" autocomplete="off" placeholder="State:">
-					<span id="states" class="text-danger font-weight-bold "></span>
+					<span id="states" style="color: red"></span>
 			</div>
 				<div>
                    <input type="Submit" name="Submit" value="Submit" class="btn btn-primary" onclick="validation()"><br><br>

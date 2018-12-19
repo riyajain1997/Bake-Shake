@@ -57,6 +57,7 @@ body{
 }*/
 .navmenu{
 	padding: 40px;
+	display: inline-block;
 }
 
 .main ul li{
@@ -152,6 +153,7 @@ body{
 	width: 25%;
 	height: 250px;
 	padding: 10px;
+	text-align: center;
 }
 .main-container .cake-container .card{
 	text-decoration: none;
