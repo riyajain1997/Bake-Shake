@@ -58,6 +58,7 @@ body{
 .navmenu{
 	padding: 40px;
 	display: inline-block;
+	font-family: 'Flamenco', cursive;
 }
 
 .main ul li{
