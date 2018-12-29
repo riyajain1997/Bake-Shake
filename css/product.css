@@ -1,0 +1,172 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body{
+	font-size: 20px;
+	overflow-x: hidden;
+	/* color: white; */
+	font-family: 'Flamenco', cursive;
+	background: #f0f5f7;
+}
+
+.clearfix:after{
+	content: ".";
+	visibility: hidden;
+	display: block;
+	height: 0px;
+	clear: both;
+}
+
+
+.header{
+	background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('../images/gal-img-05.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100px;
+	color: white;
+}
+
+.row{
+	max-width: 1266px;
+	margin: 0 auto;
+}
+
+/*.main{
+	float: right;
+	margin-top: 60px;
+	font-weight:bold;
+	color: white;
+}*/
+
+.leftmenu{
+	float: left;
+	margin-left: 0px;
+	margin-top: 40px;
+	font-family: 'Flamenco', cursive;
+}
+.main{
+	width: 180%;
+	height: 90px;
+	margin: 0px auto;
+}
+/*.main ul{
+	padding: 40px;
+}*/
+.navmenu{
+	padding: 40px;
+	display: inline-block;
+	font-family: 'Flamenco', cursive;
+}
+
+.main ul li{
+	float: left;
+	color: white;
+	width: 150px;
+	list-style: none;
+	height: 40px;
+	line-height: 40px;
+	font-size: 20px;
+	text-align: center;
+	font-weight: bold;
+	/*background-color: red;*/
+	
+}
+.main ul li a{
+	color:white;
+	text-decoration: none;
+	font-size: 90%;
+	font-weight:bold;
+}
+.main ul li ul{
+	display: none;
+}
+
+.main ul li:hover > ul{
+	display: block;
+	background: white;
+}
+
+.main ul li:hover{
+	color: orange;
+}
+.sub-menu li{
+	background: rgba(0, 0, 0,0.8);
+	width: auto;
+}
+/*.main {
+	padding: 0px;
+	color: white;
+}
+
+.main ul li{
+	float: left;
+	color: white;
+	width: 120px;
+
+
+}
+.main li{
+	display:inline-block;
+	list-style: none;
+	margin-left: 20px;
+	color: white;
+	padding: 0px; 
+	width: 100px;
+}
+
+}
+.main li a{
+	padding: 5px 0;
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 90%;
+	font-weight:100;
+}*/
+
+.main li a:hover{
+	/*border-bottom: 3px solid purple;*/
+	color:orange;
+}
+
+.main-content-header{
+	width: 1180px;
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%,  -50%);
+}
+
+.main-container{
+	min-height: 90vh;
+	/* background: #afafaf; */
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+}
+.main-container .cake-container{
+	/* background: black; */
+	float: left;
+	width: 25%;
+	height: 250px;
+	padding: 10px;
+	text-align: center;
+}
+.main-container .cake-container .card{
+	text-decoration: none;
+	color: black;
+	background: white;
+	display: block;
+	padding: 10px;
+	border-radius:5px;
+	box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.12);
+	height: 100%;
+}
+.main-container .cake-container img{
+	height: 80%;
+	width: 100%;
+}
