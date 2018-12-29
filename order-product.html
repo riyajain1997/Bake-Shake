@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bake-N-Shake</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/wed_product.css" />
+    <script src="//cdn.jsdelivr.net/npm/pouchdb@7.0.0/dist/pouchdb.min.js"></script>
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="row clearfix">
+            <div class="leftmenu">
+                <h2> BAKE N SHAKE </h2>
+            </div>
+            <div class="main">
+                <ul class="navmenu">
+                    <li><a href="index.html" target="_self">HOME</a></li>
+                    <li><a href="about_us.html" target="_self">ABOUT US</a></li>
+                    <li>CAKES
+                        <ul class="sub-menu">
+                            <li><a href="wedding.html" target="_self">WEDDING</a></li>
+                            <li><a href="3dcakes.html" target="_self">3D CAKES</a></li>
+                            <li><a href="all-cakes.html" target="_self">REGULAR CAKES</a></li>
+                            <li><a href="all-cakes.html" target="_self">CUSTOM CAKES</a></li>
+                        </ul>
+                    </li>
+                    <li>PASTRIES
+                        <ul class="sub-menu">
+                            <li><a href="pastries.html" target="_self">PASTRIES</a></li>
+                            <li><a href="cupcakes.html" target="_self">CUP CAKES</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact_us.html" target="_self">CONTACT US</a></li>
+                    <li><a href="feedback.html" target="_self">FEEDBACK</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="product">
+            <div class="product-img">
+                <img id="product-image" alt="image">
+            </div>
+            <div class="order-details">
+                <h1>Cake #180</h1>
+                <div class="form-group">
+                    <div class="form-label">
+                        Weight (Kg)
+                    </div>
+                    <div class="form-input">
+                        <select name="" id="cake-weight" onchange="calculatePrice()">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="clear-fix"></div>
+                <div class="form-group">
+                    <div class="form-label">
+                        Flavor
+                    </div>
+                    <div class="form-input">
+                        <select name="" id="cake-flavor" onchange="calculatePrice()">
+                            <option value="100">Chocolate</option>
+                            <option value="200">PineApple</option>
+                            <option value="300">Black Forest</option>
+                            <option value="400">Choco Lava</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="clear-fix"></div>
+                <div class="form-group">
+                    <div class="form-label">
+                        Price (Rs.):
+                    </div>
+                    <div class="form-input">
+                        <h3 id="cake-price">100</h3>
+                    </div>
+                </div>
+                <button type="button" class="btn-place-order" >Place Order</button>
+            </div>
+        </div>
+    </div>
+    <script src="order-product.js"></script>
+</body>
+
+</html>

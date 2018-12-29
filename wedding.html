@@ -7,6 +7,7 @@
     <title>WEDDING Cakes</title>
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <link rel="stylesheet" type="text/css" media="screen" href="css/wedding.css" />
+    <script src="//cdn.jsdelivr.net/npm/pouchdb@7.0.0/dist/pouchdb.min.js"></script>
 </head>
 
 <body>
@@ -44,7 +45,7 @@
     </div>
     <div class="main-container">
         <div class="cake-container">
-            <a class="card" href="wedding180.html" target="_self">
+            <a class="card" onclick="saveDoc('images/wed1.jpg')" href="order-product.html" target="_self">
             <img src="images/wed1.jpg" alt="">
                 <div>
                     <p>Wedding Cake 180</p>
@@ -54,7 +55,7 @@
         </div>
 
         <div class="cake-container">
-            <a class="card" href="wedding183.html">
+            <a class="card" onclick="saveDoc('images/wed2.jpg')" href="order-product.html" target="_self">
                 <img src="images/wed2.jpg" alt="">
                 <div>
                     <p>Wedding Cake 183</p>
@@ -152,6 +153,22 @@
         </div>
 
     </div>
+
+    <script>
+        var db = new PouchDB('orderProduct');
+        var remoteCouch = false;
+        var saveDoc = function (image) {
+            var todo = {
+                _id: 'selectedProduct',
+                productImage: image,
+            };
+            db.put(todo, function callback(err, result) {
+                if (!err) {
+                    console.log('Successfully posted!');
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>
