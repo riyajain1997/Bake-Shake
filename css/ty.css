@@ -1,0 +1,38 @@
+
+body
+{
+  background-image: url('../images/cake34.jpg');
+  height: 60vh;
+background-repeat: no-repeat;
+margin: 0;
+padding: 0;
+background-size: cover;
+ }
+
+input[type=button]
+{
+  background-color:ff69b4 ;
+  color: white;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+
+}
+
+
+
+h2 {
+
+
+	 margin-top: 250px;
+	 margin-bottom: 40px;
+	 margin-right: 50px;
+	font-size: 55px;
+	text-align:center;
+	font-family: Bradley Hand ITC;
+
+	color:ff1493;
+
+
+}

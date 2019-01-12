@@ -49,11 +49,15 @@ body
 	text-transform: uppercase;
 	cursor: pointer;
 	text-align: center;
-
+/*
 }
-.btn-primary{
+.btn-primary{*/
 		background: #01A2C3;
 		color: #fff;
+		border-bottom: none;
+		/*cursor: pointer;*/
+		margin-bottom: 0;
+		text-transform: uppercase; 
 }
 #login-tab,
 #register-tab{
@@ -114,7 +118,6 @@ body
 } */
 .navmenu{
 	padding: 30px;
-	font-family: 'Flamenco', cursive;
 }
 
 .main ul li{

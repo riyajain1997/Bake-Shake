@@ -104,7 +104,7 @@ body{
 {
 	border-bottom: 2px solid #f7497d;
 }
-.box input[type="submit"]
+.box input[type="button"]
 {
 	background: #f7497d;
 	border-bottom: none;

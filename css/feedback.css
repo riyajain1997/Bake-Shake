@@ -45,6 +45,23 @@ background-size: cover;
 
 }
 
+.fa-star
+{
+  font-size: 65px;
+
+}
+
+.con
+{
+  height: 60px;
+  width: 330px;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  margin-top: 22px;
+
+}
 
 .rating{
   position: absolute;
@@ -71,7 +88,7 @@ background-size: cover;
 .rating label:before
 {
   content: '\f005';
-  font-family:fontAwesome;
+  font-family: fontAwesome;
   position: relative;
   display: block;
   font-size: 30px;
@@ -97,7 +114,7 @@ background-size: cover;
 }
 
 .rating label: hover:after,
-.rating label: hover ~ label:after
+.rating label: hover ~ label:after,
 .rating input:checked ~ label:after
 {
   opacity: 1;
@@ -143,8 +160,7 @@ input[type=button]
   padding: 50px;
 }*/
 .navmenu{
-  padding: 40px;
-  font-family: 'Flamenco', cursive;
+  padding: 50px;
 }
 
 
