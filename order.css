@@ -29,3 +29,7 @@ th,td{
 	padding: 15px;
 	text-align: center;
 }
+.img-cart-item{
+  height: 100px;
+  width: 100px;
+}

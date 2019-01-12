@@ -2,6 +2,7 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="order.css">
+    <script src="js/pouchDb.js"></script>
 </head>
 <body>
    <center><form>
@@ -9,25 +10,27 @@
    	 	REVIEW YOUR SHOPPING CART</caption><br><br><br>
 
    	<table  border="1" cellpadding="10"  >
-   		<tr>
-   		<th>PRODUCT</th>
-   		<th>DETAILS</th>
-   		<th>OPTIONS</th>
-   		<th>UNIT PRICE</th>
-   		<th>TOTAL</th>
-   	    </tr>
+		<thead>
+			<tr>
+			<th>PRODUCT</th>
+			<th>DETAILS</th>
+			<th>OPTIONS</th>
+			<th>UNIT PRICE</th>
+			<th>TOTAL</th>
+			</tr>
+		</thead>
+		<tbody id="cart-body">
+		</tbody>
 
-        <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-
-
-        </tr>
-
-   		<tr> <td colspan=3>Enter your Postal Code &nbsp&nbsp<input type="text" name="name">&nbsp&nbsp&nbsp<input type="button" value="calculate my delivery charge" name="calculate my delivery charge"> or <input type="button"  value="calculate my delivery charge"" name="calculate my delivery charge"></td> 
+   		<tr> 
+			   <td colspan=3>
+				   Enter your Postal Code &nbsp&nbsp
+				   <input type="text" name="name">
+				   &nbsp&nbsp&nbsp
+				   <input type="button" value="calculate my delivery charge" name="calculate my delivery charge">
+					or 
+					<input type="button"  value="Pick Up" name="Pick Up">
+				</td> 
 
         <td></td>
         <td></td></tr>
@@ -40,7 +43,7 @@
    		  <td></td></tr>
 
 
-   		<tr> <td colspan=2>Enter a Promo Code (optional)&nbsp&nbsp<input type="text" name="name">&nbsp&nbsp&nbsp<input type="button" value="Apply" name="Apply"></td> 
+   		<tr> <td colspan=2>Enter a Promo Code (optional)&nbsp&nbsp<input id="discount-input" type="text" name="name">&nbsp&nbsp&nbsp<input type="button" value="Apply" name="Apply" onclick="setDiscount()"></td> 
    		<td></td>
    		<td></td>
    		<td></td></tr>
@@ -48,26 +51,94 @@
         <tr> 
         <td colspan=3></td>
         <td>Subtotal:</td>
-        <td></td>
+        <td id="subtotal"></td>
         </tr>
 
         <tr>
              <td colspan=3></td>
         	<td>Discount:</td>
-        	<td></td>
+        	<td id="discount"></td>
         </tr>
 
         <tr>
              <td colspan=3></td>
-        	<td>Total:</td>
-        	<td></td>
+        	<td >Total: </td>
+        	<td id="total"></td>
         </tr>
    	</table>
 </form></center>
    	</table>
    </form>
 
+<script>
+var dbCart = new PouchDB('cart');
+var cartBody = document.getElementById('cart-body');
+var subTotalEement = document.getElementById('subtotal');
+var totalEement = document.getElementById('total');
+var discountEement = document.getElementById('discount');
+var discountInput = document.getElementById('discount-input');
+var cartItems = [];
+var subTotal = 0;
+var discount = 0;
+var promoCodes = {
+	'flat10':10,
+	'flat50':50,
+	'free':subTotal
+}
+dbCart.allDocs({include_docs: true, descending: true}, function(err, doc) {
+	console.log('All cart items',doc);
+	cartItems = doc.rows;
+	updateCart();
+});
 
+var updateCart = function(){
+	var local_subtotal = 0;
+	cartItems.forEach(item => {
+		local_subtotal += item.doc.price;
+		cartBody.innerHTML += `
+			<tr>
+				<td>
+					<p>${item.doc.name}</p>
+					<img class="img-cart-item" src="${item.doc.image}" alt="cake">
+				</td>
+				<td>
+					<p> <span>Weight: </span>${item.doc.weight} Kg</p>
+				</td>
+				<td>
+					<a >Remove</a>
+				</td>
+				<td>
+					<p>Rs. ${item.doc.price}</p>
+				</td>
+				<td>
+					<p>Rs. ${item.doc.price}</p>
+				</td>
+			</tr>
+		`;
+	});
+	subTotal = local_subtotal;
+	updateTotals();
+}
+
+var updateTotals = function () {
+	subTotalEement.innerText = subTotal;
+	promoCodes.free = subTotal;
+	discountEement.innerText = discount;
+	totalEement.innerText = subTotal - discount;	
+}
+
+var setDiscount = function () {
+	var promoKey = discountInput.value
+	if(promoCodes[promoKey]){
+		discount = promoCodes[promoKey];
+	}else{
+		discount = 0;
+		discountInput.value = ''
+	}
+	updateTotals();
+}
+
+</script>
 
 
 </body>
