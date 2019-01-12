@@ -43,7 +43,13 @@
    		  <td></td></tr>
 
 
-   		<tr> <td colspan=2>Enter a Promo Code (optional)&nbsp&nbsp<input id="discount-input" type="text" name="name">&nbsp&nbsp&nbsp<input type="button" value="Apply" name="Apply" onclick="setDiscount()"></td> 
+   		<tr>
+			<td colspan=2>
+				Enter a Promo Code (optional)&nbsp&nbsp
+				<input id="discount-input" type="text" name="name">
+				&nbsp&nbsp&nbsp
+				<input type="button" value="Apply" name="Apply" onclick="setDiscount()">
+			</td> 
    		<td></td>
    		<td></td>
    		<td></td></tr>
@@ -93,7 +99,8 @@ dbCart.allDocs({include_docs: true, descending: true}, function(err, doc) {
 
 var updateCart = function(){
 	var local_subtotal = 0;
-	cartItems.forEach(item => {
+	for (let index = 0; index < cartItems.length; index++) {
+		const item = cartItems[index];
 		local_subtotal += item.doc.price;
 		cartBody.innerHTML += `
 			<tr>
@@ -115,7 +122,8 @@ var updateCart = function(){
 				</td>
 			</tr>
 		`;
-	});
+		//tamplet literal(`) 
+	}
 	subTotal = local_subtotal;
 	updateTotals();
 }
@@ -128,7 +136,7 @@ var updateTotals = function () {
 }
 
 var setDiscount = function () {
-	var promoKey = discountInput.value
+	var promoKey = discountInput.value.toLowerCase();
 	if(promoCodes[promoKey]){
 		discount = promoCodes[promoKey];
 	}else{
