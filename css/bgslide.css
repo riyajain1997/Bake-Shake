@@ -36,34 +36,34 @@
 
 @keyframes slide{
 	0%{
-		background-image: url('../bakenshake/images/gal-img-05.jpg');
+		background-image: url('images/gal-img-05.jpg');
 	}
 	20%{
-		background-image: url('../images/gal-img-05.jpg');
+		background-image: url('images/gal-img-05.jpg');
 	}
 	20.01%{
-		background-image: url('../images/cup.jpeg');
+		background-image: url('images/cup.jpeg');
 	}
 	40%{
-		background-image: url('../images/cup.jpeg');
+		background-image: url('images/cup.jpeg');
 	}
 	40.01%{
-		background-image: url('../images/mainslide2.jpg');
+		background-image: url('images/mainslide2.jpg');
 	}
 	60%{
-		background-image: url('../images/mainslide2.jpg');
+		background-image: url('images/mainslide2.jpg');
 	}
 	60.01%{
-		background-image: url('../images/mainslide3.jpg');
+		background-image: url('images/mainslide3.jpg');
 	}
 	80%{
-		background-image: url('../images/mainslide3.jpg');
+		background-image: url('images/mainslide3.jpg');
 	}
 	80.01%{
-		background-image: url('../images/mainslide7.jpg');
+		background-image: url('images/mainslide7.jpg');
 	}
 	100%{
-		background-image: url('../images/mainslide7.jpg');
+		background-image: url('images/mainslide7.jpg');
 	}
 }
 *{
