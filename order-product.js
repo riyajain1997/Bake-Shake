@@ -28,6 +28,7 @@ window.onload = function () {
     try {
       var response = await dbCart.post(docToAdd);
       console.log('successfully Added',response);
+	    window.location.href = 'order.html';
     } catch (error) {
       console.log('error on adding to  cart',error);
       

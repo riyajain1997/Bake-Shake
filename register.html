@@ -26,9 +26,9 @@ function validation()
 
             if(lpass == ""){
                 document.getElementById('lpass').innerHTML =" ** Please fill the Password";
-                return false;
             }
-
+			window.location.href = 'ty.html';
+			return false;
         }    		
 
 function validate()
@@ -110,7 +110,9 @@ function validate()
     		if(state == ""){
     			document.getElementById('states').innerHTML =" ** Please fill state name";
     			return false;
-    		}
+			}
+			window.location.href = 'ty.html';	
+			return false;
     	}
 
 </script>
