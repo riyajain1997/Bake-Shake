@@ -195,15 +195,13 @@ header{
 	width: 880px;
 	position: absolute;
 	top: 55%;
-	left: 50%;
-	transform: translate(-50%,-50%);
+	left: 10%;
+	/* transform: translate(-50%,-50%); */
 
 }
 
 h1{
 	color: white;
-
-	font-size: 200%;
 	word-spacing: 5px;
 	letter-spacing: 2px;
 	margin-bottom: 20px;
