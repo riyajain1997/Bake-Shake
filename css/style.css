@@ -99,36 +99,7 @@ header{
 .main ul li:hover{
 	color: orange;
 }
-/*.main {
-	padding: 0px;
-	color: white;
-}
 
-.main ul li{
-	float: left;
-	color: white;
-	width: 120px;
-
-
-}
-.main li{
-	display:inline-block;
-	list-style: none;
-	margin-left: 20px;
-	color: white;
-	padding: 0px; 
-	width: 100px;
-}
-
-}
-.main li a{
-	padding: 5px 0;
-	color: white;
-	text-decoration: none;
-	text-transform: uppercase;
-	font-size: 90%;
-	font-weight:100;
-}*/
 
 .main li a:hover{
 	/*border-bottom: 3px solid purple;*/

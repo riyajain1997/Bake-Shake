@@ -17,11 +17,8 @@
 	animation: slide 20s infinite;
 
 }
-.content{
-	/*color: black;
-	width: 100%;*/
+.content{	
 	height: 100vh;
-	/*background-color: rgba(0, 0, 0, 0.5);*/
 }
 
 .principal{
@@ -30,8 +27,6 @@
 	transform: translate(-50%,-50%);
 	position: absolute;
 	
-	/*letter-spacing: 5px;
-	text-align: center;*/
 }
 
 @keyframes slide{
