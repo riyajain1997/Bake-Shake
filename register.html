@@ -27,7 +27,7 @@ function validation()
             if(lpass == ""){
                 document.getElementById('lpass').innerHTML =" ** Please fill the Password";
             }
-			window.location.href = 'ty.html';
+			window.location.href = 'product.html';
 			return false;
         }    		
 
@@ -111,7 +111,7 @@ function validate()
     			document.getElementById('states').innerHTML =" ** Please fill state name";
     			return false;
 			}
-			window.location.href = 'ty.html';	
+			window.location.href = 'product.html';	
 			return false;
     	}
 
@@ -184,19 +184,20 @@ function validate()
 				</div>
 			
 				<div class="form-group">
-					<input type="password" name="" class="form-control inputbox" id="register-password" autocomplete="off" placeholder="Password:">
+					<input type="password" name="" class="form-control inputbox" id="register-password" autocomplete="off" placeholder="Password:" minlength=8>
 					<span id="passwords" style="color: red"></span>
 				</div>
+	
 				<div class="form-group">
 					<input type="password" name="" class="form-control inputbox" id="register-cnfmpassword" autocomplete="off" placeholder="Confirm Password:">
 					<span id="confirmpass" style="color: red"></span>
 				</div>
 				<div class="form-group">
-					<input type="text" name="" class="form-control inputbox" id="mobilenumber" autocomplete="off" placeholder="Mobile No:">
+					<input type="text" name="" class="form-control inputbox" id="mobilenumber" autocomplete="off" placeholder="Mobile No:" maxlength=10 minlength=10>
 					<span id="mobileno" style="color: red"></span>
 				</div>
 				<div class="form-group">
-					<input type="email" name="" class="form-control inputbox" id="email" autocomplete="off" placeholder="Email Id:">
+					<input type="email" name="" class="form-control inputbox" type=email id="email" autocomplete="off" placeholder="Email Id:">
 					<span id="emailids" style="color: red"></span>
 				</div>
 			<div class="form-group">

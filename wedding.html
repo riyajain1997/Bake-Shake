@@ -46,7 +46,7 @@
     </div>
     <div class="main-container">
         <div class="cake-container">
-            <a class="card" onclick="saveDoc('images/wed1.jpg','Wedding Cake 180')" href="order-product.html" target="_self">
+            <a class="card" onclick="saveDoc('images/wed1.jpg','Wedding Cake 180')"  >
             <img src="images/wed1.jpg" alt="">
                 <div>
                     <p>Wedding Cake 180</p>
@@ -56,7 +56,7 @@
         </div>
 
         <div class="cake-container">
-            <a class="card" onclick="saveDoc('images/wed2.jpg','Wedding Cake 183')" href="order-product.html" target="_self">
+            <a class="card" onclick="saveDoc('images/wed2.jpg','Wedding Cake 183')"  >
                 <img src="images/wed2.jpg" alt="">
                 <div>
                     <p>Wedding Cake 183</p>
@@ -65,7 +65,7 @@
         </div>
         
         <div class="cake-container">
-            <a class="card" onclick="saveDoc('images/wed4.jpg','Wedding Cake 186')" href="order-product.html">
+            <a class="card" onclick="saveDoc('images/wed4.jpg','Wedding Cake 186')" >
                 <img src="images/wed4.jpg" alt="">
                 <div>
                     <p>Wedding Cake 186</p>
@@ -73,7 +73,7 @@
             </a>
         </div>
         <div class="cake-container">
-            <a class="card" onclick="saveDoc('images/wed5.jpg','Wedding Cake 189')" href="order-product.html">
+            <a class="card" onclick="saveDoc('images/wed5.jpg','Wedding Cake 189')" >
                 <img src="images/wed5.jpg" alt="">
                 <div>
                     <p>Wedding Cake 189</p>
@@ -81,7 +81,7 @@
             </a>
         </div>
         <div class="cake-container">
-            <a class="card" onclick="saveDoc('images/wed7.jpg','Wedding Cake 192')" href="order-product.html">
+            <a class="card" onclick="saveDoc('images/wed7.jpg','Wedding Cake 192')" >
                 <img src="images/wed7.jpg" alt="">
                 <div>
                     <p>Wedding Cake 192</p>
@@ -89,7 +89,7 @@
             </a>
         </div>
         <div class="cake-container">
-            <a class="card" onclick="saveDoc('images/wed8.jpg','Wedding Cake 195')" href="order-product.html">
+            <a class="card" onclick="saveDoc('images/wed8.jpg','Wedding Cake 195')" >
                 <img src="images/wed8.jpg" alt="">
                 <div>
                     <p>Wedding Cake 195</p>
@@ -97,7 +97,7 @@
             </a>
         </div>
         <div class="cake-container">
-            <a class="card" onclick="saveDoc('images/wed9.jpg',,'Wedding Cake 198')" href="order-product.html">
+            <a class="card" onclick="saveDoc('images/wed9.jpg',,'Wedding Cake 198')" >
                 <img src="images/wed9.jpg" alt="">
                 <div>
                     <p>Wedding Cake 198</p>
@@ -105,7 +105,7 @@
             </a>
         </div>
         <div class="cake-container">
-            <a class="card" onclick="saveDoc('images/wed13.jpg','Wedding Cake 210')" href="order-product.html">
+            <a class="card" onclick="saveDoc('images/wed13.jpg','Wedding Cake 210')" >
                 <img src="images/wed13.jpg" alt="">
                 <div>
                     <p>Wedding Cake 210</p>
@@ -113,7 +113,7 @@
             </a>
         </div>
         <div class="cake-container">
-            <a class="card" onclick="saveDoc('images/wed11.jpg','Wedding Cake 240')" href="order-product.html">
+            <a class="card" onclick="saveDoc('images/wed11.jpg','Wedding Cake 240')" >
                 <img src="images/wed11.jpg" alt="">
                 <div>
                     <p>Wedding Cake 240</p>
@@ -121,7 +121,7 @@
             </a>
         </div>
         <div class="cake-container">
-            <a class="card" onclick="saveDoc('images/wed15.jpg','Wedding Cake 270')" href="order-product.html">
+            <a class="card" onclick="saveDoc('images/wed15.jpg','Wedding Cake 270')" >
                 <img src="images/wed15.jpg" alt="">
                 <div>
                     <p>Wedding Cake 270</p>
@@ -129,7 +129,7 @@
             </a>
         </div>
         <div class="cake-container">
-            <a class="card" onclick="saveDoc('images/wed3.png','Wedding Cake 300')"href="order-product.html">
+            <a class="card" onclick="saveDoc('images/wed3.png','Wedding Cake 300')">
                 <img src="images/wed3.png" alt="">
                 <div>
                     <p>Wedding Cake 300</p>
@@ -137,7 +137,7 @@
             </a>
         </div>
         <div class="cake-container">
-            <a class="card"onclick="saveDoc('images/wed10.jpeg','Wedding Cake 303')" href="order-product.html">
+            <a class="card"onclick="saveDoc('images/wed10.jpeg','Wedding Cake 303')" >
                 <img src="images/wed10.jpeg" alt="">
                 <div>
                     <p>Wedding Cake 303</p>
@@ -145,7 +145,7 @@
             </a>
         </div>
         <div class="cake-container">
-            <a class="card" onclick="saveDoc('images/wed12.png','Wedding Cake 306')" href="order-product.html">
+            <a class="card" onclick="saveDoc('images/wed12.png','Wedding Cake 306')" >
                 <img src="images/wed12.png" alt="">
                 <div>
                     <p id="name">Wedding Cake 306</p>
@@ -166,6 +166,7 @@
             db.put(doc, function callback(err, result) {
                 if (!err) {
                     console.log('Successfully posted!');
+                    window.location.href='order-product.html';
                 }
             });
         }
